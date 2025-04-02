@@ -1,8 +1,15 @@
-export default function MovieList({ trends }) {
+import { Link, useLocation } from 'react-router-dom';
+
+export default function MovieList({ data }) {
+  const location = useLocation();
   return (
     <ul>
-      {trends.map(trend => (
-        <li key={trend.id}>{trend.title}</li>
+      {data.map((item, index) => (
+        <li key={`${item.id}-${index}`}>
+          <Link to={`/movies/${item.id}`} state={location}>
+            {item.title}
+          </Link>
+        </li>
       ))}
     </ul>
   );

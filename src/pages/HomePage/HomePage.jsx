@@ -20,7 +20,7 @@ export default function HomePage() {
   return (
     <div>
       <h2>Tranding today</h2>
-      <MovieList trends={trend} />
+      <MovieList data={trend} />
     </div>
   );
 }
