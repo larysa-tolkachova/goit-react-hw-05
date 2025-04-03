@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.description {
+  display: flex;
+  gap: 30px;
+}
+
+hr {
+  border: 1px solid #e6e6fa;
+  margin: 10px 0;
+}
+
+.goback {
+  width: 80px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.goback:hover {
+  color: #191970;
+}

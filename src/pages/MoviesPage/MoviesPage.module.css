@@ -1,0 +1,10 @@
+.container {
+  margin: 20px;
+}
+
+input {
+  padding: 10px;
+  margin-right: 5px;
+  outline: none;
+  width: 300px;
+}

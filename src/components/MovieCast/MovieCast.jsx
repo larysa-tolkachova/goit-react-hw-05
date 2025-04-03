@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { movieDetailsCast } from '../../services/api';
 import { useParams } from 'react-router-dom';
+import css from './MovieCast.module.css';
 
 export default function MovieCast() {
   const { movieId } = useParams();
@@ -22,7 +23,7 @@ export default function MovieCast() {
 
   return (
     <div>
-      <ul>
+      <ul className={css.ul}>
         {cast.map(({ name, id, character, profile_path }) => (
           <li key={id}>
             <img src={img + profile_path} alt={name} width="100" />

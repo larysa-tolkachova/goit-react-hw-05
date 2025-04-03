@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { movieSearch } from '../../services/api';
 import { Outlet, useSearchParams } from 'react-router-dom';
 import MovieList from '../../components/MovieList/MovieList';
+import css from './MoviesPage.module.css';
 
 export default function MoviesPage() {
   const [queryFilm, setQueryFilm] = useState([]);
@@ -37,7 +38,7 @@ export default function MoviesPage() {
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className={css.container}>
         <input type="text" name="query"></input>
         <button type="submit">Search</button>
       </form>
